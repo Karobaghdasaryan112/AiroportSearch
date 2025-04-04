@@ -1,0 +1,29 @@
+﻿# ✈️ Airport Prefix Search using Trie (C#)
+
+This project is a high-performance console application that implements **prefix-based search** using the **Trie (prefix tree)** data structure. It allows fast lookup of airport names from a CSV file based on user input.
+
+---
+
+## 🚀 Features
+
+- Efficient prefix search (`StartsWith`) in real time.
+- Uses Trie (prefix tree) for optimized performance (O(M) complexity).
+- Reads and parses large CSV files using regex to handle quoted values correctly.
+- Displays search results and time taken (in milliseconds).
+- Clean separation of concerns using service interfaces (`IDataProvider` and `ITree`).
+
+---
+
+## 🗂️ Project Structure
+
+AeroportSearch/\
+├── Indexes/
+│ └── Trie/ 
+│ ├── Trie.cs # Trie implementation
+│ ├── TrieNode.cs # Trie node definition
+│ └── ITree.cs # Tree interface (e.g., Insert, Search, StartsWith)
+├── Services/ 
+│ ├── CsvDataProvider.cs # Loads data from CSV
+│ └── IDataProvider.cs # Interface for data providers
+├── Data/ 
+│ └── airports.csv 
